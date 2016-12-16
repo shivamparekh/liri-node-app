@@ -67,7 +67,7 @@ function useTwitter(){
 
   		for (var i = 0; i < tweets.length; i++) {
 
-  			console.log('\n--------------------------------\n')
+  			console.log('\n------------------------------\n')
 
 			console.log('Username: ' + tweets[i].user.screen_name);
 
@@ -86,9 +86,7 @@ function useSpotify(song){
 	 
 	spotify.search({type: 'track', query: song}, function(err, data) {
 
-	    if (!song) return console.log (song = 'The Sign');
-
-	    console.log('\n----------Spotify Search:----------\n')
+		console.log('\n----------Spotify Search:----------\n')
 
 		console.log('Artist: ' + data.tracks.items[0].artists[0].name);
 
@@ -98,7 +96,7 @@ function useSpotify(song){
 
 		console.log('Album: ' + data.tracks.items[0].album.name);
 
-		console.log('\n-------------------------------\n')
+		console.log('\n-------------------------------\n');
 
 	});
 };
