@@ -67,15 +67,42 @@ function useTwitter(){
 
   		for (var i = 0; i < tweets.length; i++) {
 
-  			console.log("@" + tweets[i].user.screen_name);
+  			console.log('\n--------------------------------\n')
 
-	      	console.log(tweets[i].text);
+			console.log('Username: ' + tweets[i].user.screen_name);
 
-	      	console.log("Date: " + tweets[i].created_at + "\n");
+	      	console.log('Tweet: ' + tweets[i].text);
+
+	      	console.log('Date: ' + tweets[i].created_at);
 
 	  	}
 
 	});
 }
 
-// function omdb
+// Spotify
+
+function useSpotify(song){
+	 
+	spotify.search({type: 'track', query: song}, function(err, data) {
+
+	    if (!song) return console.log (song = 'The Sign');
+
+	    console.log('\n----------Spotify Search:----------\n')
+
+		console.log('Artist: ' + data.tracks.items[0].artists[0].name);
+
+		console.log('Song: ' + data.tracks.items[0].name);
+
+		console.log('Preview Link' + data.tracks.items[0].preview_url);
+
+		console.log('Album: ' + data.tracks.items[0].album.name);
+
+		console.log('\n-------------------------------\n')
+
+	});
+};
+
+// OMDB
+
+
