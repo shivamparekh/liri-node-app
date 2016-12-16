@@ -68,7 +68,9 @@ function useTwitter(){
   		for (var i = 0; i < tweets.length; i++) {
 
   			console.log("@" + tweets[i].user.screen_name);
-	      	console.log("Tweets " + "#" + (i + 1) + ": " + tweets[i].text);
+
+	      	console.log(tweets[i].text);
+
 	      	console.log("Date: " + tweets[i].created_at + "\n");
 
 	  	}
